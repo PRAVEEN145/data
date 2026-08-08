@@ -45,7 +45,7 @@ jobs:
       - name: Upload to Databricks Volume
         run: |
           databricks fs cp dist/*.whl \
-            dbfs:/Volumes/dmcat/dmschema/sample_project/sample-artifact/ \
+            dbfs:/Volumes/datamodel/dmschema/sample_project/sample-artifact/ \
             --overwrite
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
